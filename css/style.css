@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.mycontainer{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overscroll-behavior-y: scroll;
+    height: 100vh;
+}
+
+.about{
+    background: white;
+}
+
+.experience{
+    background: grey;
+    justify-content: left;
+}
+
+.education{
+    background: darkgray;
+    color: white;
+    justify-content: left;
+}
+
+.skills{
+    background: black;
+    color: white;
+    justify-content: left;
+}
+
+.contact{
+    background: rgb(191, 66, 240);
+    justify-content: left;
+}
