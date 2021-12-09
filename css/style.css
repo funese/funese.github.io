@@ -21,27 +21,30 @@ section {
 }
 
 .about{
-    background: white;
+    background: rgb(75, 147, 255);
+    color: white;
 }
 
 .experience{
-    background: grey;
-    justify-content: left;
+    background: rgb(52, 133, 255);
+    color: white;
+    justify-content: center;
 }
 
 .education{
-    background: darkgray;
+    background: rgb(75, 147, 255);
     color: white;
-    justify-content: left;
+    justify-content: center;
 }
 
 .skills{
-    background: black;
+    background: rgb(52, 133, 255);
     color: white;
-    justify-content: left;
+    justify-content: center;
 }
 
 .contact{
-    background: rgb(191, 66, 240);
-    justify-content: left;
+    background: rgb(75, 147, 255);
+    color: white;
+    justify-content: center;
 }
