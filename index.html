@@ -23,7 +23,12 @@
 </head>
 <script>
     $(document).ready(function () {
-        $("#name").animate({left: '250px'}, "slow");
+        $("#name").animate({
+            text-align: center
+        }, "slow");
+        $("#introduction").animate({
+            text-align: center
+        }, "slow");
     });
 </script>
 
@@ -66,9 +71,9 @@
 
 <body>
 
-    <div id="about" class="container text-center">
-        <h1 id="name"><b>Hi! I'm Emiliano</b></h1>
-        <h2>I'm a Software Developer finishing its degree in Computer Engineering.</h2>
+    <div id="about" class="container">
+        <h1 id="name" class="text-left"><b>Hi! I'm Emiliano</b></h1>
+        <h2 id="introduction" class="text-right">I'm a Software Developer finishing its degree in Computer Engineering.</h2>
     </div>
     <div id="experience" class="container text-center">
     </div>
