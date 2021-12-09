@@ -31,21 +31,74 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        var scrolling = false;
+        var currentPos = 0;
+
+        function scrollUp() {
+            if (!scrolling && currentPos > 0) {
+                scrolling = true;
+                currentPos--;
+                var scrollToElement = $('.scrollTo')[currentPos];
+
+                $('html, body').animate({
+                    scrollTop: $(scrollToElement).offset().top
+                }, 500, function () {
+                    scrolling = false;
+                });
+            }
+        }
+
+        function scrollDown() {
+            if (!scrolling && currentPos < $('.scrollTo').length - 1) {
+                scrolling = true;
+                currentPos++;
+                var scrollToElement = $('.scrollTo')[currentPos];
+
+                $('html, body').animate({
+                    scrollTop: $(scrollToElement).offset().top
+                }, 500, function () {
+                    scrolling = false;
+                });
+            }
+        }
+
+        $(document).ready(function () {
+
+            // Get the current position on load
+
+            for (var i = 0; i < $('.scrollTo').length; i++) {
+                var elm = $('.scrollTo')[i];
+
+                if ($(document).scrollTop() >= $(elm).offset().top) {
+                    currentPos = i;
+                }
+            }
+
+            $(document).bind('DOMMouseScroll', function (e) {
+                if (e.originalEvent.detail > 0) {
+                    scrollDown();
+                } else {
+                    scrollUp();
+                }
+                return false;
+            });
+
+            $(document).bind('mousewheel', function (e) {
+                if (e.originalEvent.wheelDelta < 0) {
+                    scrollDown();
+                } else {
+                    scrollUp();
+                }
+                return false;
+            });
+        });
+    </script>
 </head>
-<!--<script>
-    $(document).ready(function () {
-        $("#welcome_message").animate({
-            "text-align": "left"
-        }, 1000);
-        $("#introduction").animate({
-            "text-align": "center"
-        }, 1000);
-    });
-</script>-->
 
 <title>Emiliano Funes - Portfolio</title>
 <nav class="navbar navbar-expand-lg navbar-light">
-    <!--<nav class="navbar navbar-default">-->
     <div class="container-fluid">
         <div class="navbar-header">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -83,29 +136,29 @@
 <body>
 
     <div class="jumbotron vertical-center">
-        <div id="about" class="container-fluid text-center">
+        <div id="about" class="container-fluid text-center scrollTo">
             <h1 id="welcome_message"><b>Hi! I'm Emiliano</b></h1>
             <h2 id="introduction">I'm a Software Developer finishing its degree in Computer Engineering.
             </h2>
         </div>
     </div>
     <div class="jumbotron">
-        <div id="experience" class="container text-start">
+        <div id="experience" class="container-fluid text-start scrollTo">
             <h1>Experience</h1>
         </div>
     </div>
     <div class="jumbotron">
-        <div id="education" class="container text-start">
+        <div id="education" class="container-fluid text-start scrollTo">
             <h1>Education</h1>
         </div>
     </div>
     <div class="jumbotron">
-        <div id="skills" class="container text-start">
+        <div id="skills" class="container-fluid text-start">
             <h1>Skills</h1>
         </div>
     </div>
     <div class="jumbotron">
-        <div id="contact" class="container text-start">
+        <div id="contact" class="container-fluid text-start">
             <h1>Contact</h1>
         </div>
     </div>
