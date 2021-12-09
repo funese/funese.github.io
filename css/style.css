@@ -26,8 +26,8 @@ section {
 }
 
 .experience{
-    background: rgb(52, 133, 255);
-    color: white;
+    background: white;
+    color: rgb(52, 133, 255);
     justify-content: center;
 }
 
@@ -38,8 +38,8 @@ section {
 }
 
 .skills{
-    background: rgb(52, 133, 255);
-    color: white;
+    background: white;
+    color: rgb(52, 133, 255);
     justify-content: center;
 }
 
