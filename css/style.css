@@ -9,7 +9,6 @@ section {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     scroll-snap-align: start;
 }
 
@@ -22,29 +21,21 @@ section {
 
 .about{
     background: rgb(75, 147, 255);
+    justify-content: center;
+    align-items: center;
     color: white;
 }
 
-.experience{
+.white_section{
     background: white;
     color: rgb(52, 133, 255);
     justify-content: center;
+    padding-top: 5%;
 }
 
-.education{
+.blue_section{
     background: rgb(75, 147, 255);
     color: white;
     justify-content: center;
-}
-
-.skills{
-    background: white;
-    color: rgb(52, 133, 255);
-    justify-content: center;
-}
-
-.contact{
-    background: rgb(75, 147, 255);
-    color: white;
-    justify-content: center;
+    padding-top: 5%;
 }
