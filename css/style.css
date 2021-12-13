@@ -5,11 +5,25 @@
     font-family: sans-serif;
 }
 
+body {
+    padding-top: 70px;
+}
+
 section {
     height: 100vh;
     display: flex;
     justify-content: center;
     scroll-snap-align: start;
+}
+
+.vertical-center {
+    min-height: 85%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 85vh;
+    /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
 }
 
 .mycontainer{
@@ -38,4 +52,14 @@ section {
     color: white;
     justify-content: center;
     padding-top: 5%;
+}
+
+.nav-bar {
+    height: 10vh;
+}
+
+.txt-rotate {
+    color: white;
+    font-weight: 500;
+    font-family: "Lucida Console", "Courier New", monospace;
 }

@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    .vertical-center {
-        min-height: 85%;
-        /* Fallback for browsers do NOT support vh unit */
-        min-height: 85vh;
-        /* These two lines are counted as one :-)       */
-
-        display: flex;
-        align-items: center;
-    }
-</style>
 
 <head>
     <meta charset="utf-8" />
@@ -36,86 +25,80 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<title>Emiliano Funes - Portfolio</title>
-<!--<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Emiliano Funes</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="#navbarSupportedContent">
-            <ul class="nav navbar-nav navbar-end">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact me!</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>-->
-
-
 <body>
-    <div class="container-fluid mycontainer">
-        <section class="about" id="about">
-            <div class="container-fluid text-center">
-                <h1 id="welcome_message"><b>Hi! I'm Emiliano</b></h1>
-                <!--<h2 id="introduction">I'm a Software Developer finishing its degree in Computer Engineering.-->
-                </h2>
-                <h2>I'm a 
-                    <span class="txt-rotate" data-period="2000"
-                        data-rotate='[ "Computer Engineer.", "Python Developer.", "Backend Developer." ]'></span>
-                </h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <section class="white_section" id="experience">
+        </div>
+    </nav>
+
+
+
+    <section class="about" id="about">
+        <div class="container-fluid text-center">
+            <h1 id="welcome_message"><b>Hi! I'm Emiliano</b></h1>
+            <!--<h2 id="introduction">I'm a Software Developer finishing its degree in Computer Engineering.-->
+            </h2>
+            <h2>I'm a
+                <span class="txt-rotate" data-period="2000"
+                    data-rotate='[ "Computer Engineer.", "Software Developer.", "Backend Developer." ]'></span>
+            </h2>
+        </div>
+    </section>
+    <section class="white_section" id="experience">
+        <div>
             <div>
-                <div>
-                    <h1>Experience</h1>
-                </div>
-                <div class="jumbotron">
-                    <code>from job_utilities import Job</code><br>
-                    <CODE>&emsp;</CODE><br>
-                    <code>if __name__ == "__main__":</code><br>
-                    <code>
+                <h1>Experience</h1>
+            </div>
+            <div class="jumbotron">
+                <code>from job_utilities import Job</code><br>
+                <CODE>&emsp;</CODE><br>
+                <code>if __name__ == "__main__":</code><br>
+                <code>
                         &emsp; jobs = [Job("Lyrtron", "Intern Software Developer", "February 2021", "June 2021")</code><br>
-                </div>
-                <samp>Resultado</samp>
             </div>
-        </section>
-        <section class="blue_section" id="education">
-            <div>
-                <h1>Education</h1>
-            </div>
-        </section>
-        <section class="white_section" id="skills">
-            <div>
-                <h1>Skills</h1>
-            </div>
-        </section>
-        <section class="blue_section" id="contact">
-            <div>
-                <h1>Contact</h1>
-            </div>
-        </section>
+            <samp>Resultado</samp>
+        </div>
+    </section>
+    <section class="blue_section" id="education">
+        <div>
+            <h1>Education</h1>
+        </div>
+    </section>
+    <section class="white_section" id="skills">
+        <div>
+            <h1>Skills</h1>
+        </div>
+    </section>
+    <section class="blue_section" id="contact">
+        <div>
+            <h1>Contact</h1>
+        </div>
+    </section>
     </div>
 </body>
 
